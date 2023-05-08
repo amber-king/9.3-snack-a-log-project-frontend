@@ -1,4 +1,11 @@
-# Getting Started with Create React App
+# Snack-A-Log Project_9.3 🫒
+
+### Netify Fontend Link → https://snack-a-log-front-site.netlify.app/
+### Render Backend Link → https://snack-a-log-site.onrender.com/
+### Trello Workflow Board Link → https://trello.com/b/Cy3WPzsV/93snack-log-workflow-%F0%9F%AB%92
+
+
+<!-- ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -67,4 +74,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
