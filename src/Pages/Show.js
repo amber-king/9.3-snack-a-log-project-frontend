@@ -48,7 +48,8 @@ function Show() {
         <h1>{snack.food_group}</h1>
         <h1>In the {snack.time_eaten}</h1>
         <h1>Calorie count: {snack.calorie_count}</h1>
-        {snack.is_healthy && <h1>⭐️</h1>}
+        <h1>Quantity: {snack.quantity}</h1>
+        {snack.is_healthy ? <h1>❤️</h1> : <h1>😕</h1>}
         <button onClick={handleDelete}>Delete</button>
         <Link to={`/snacks/${id}/edit`}>
           <button>Edit</button>
