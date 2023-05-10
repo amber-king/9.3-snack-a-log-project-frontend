@@ -8,7 +8,7 @@ export default function NavBar() {
         <Link to="/">Snack-a-Log 🫒</Link>{" "}
       </h1>
       <h3>
-        <Link to="/snacks">Snacks</Link>
+        <Link to="/snacks">Snacks🥑</Link>
       </h3>
       <button>
         <Link to="/snacks/new">New Snack</Link>

@@ -1,3 +1,4 @@
+// TODO: http://localhost:3033/snacks -> connects to Snack.js;snack,js will NOT work w/o it
 import { Link } from "react-router-dom";
 
 function Snack({ snack }) {
