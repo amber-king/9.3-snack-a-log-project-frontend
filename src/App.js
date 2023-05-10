@@ -1,6 +1,8 @@
 import "./App.css";
 import SnackShow from "./SnackShow";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import EditForm from "./EditForm";
+import NewForm from "./NewForm";
 
 function App() {
   return (
@@ -10,8 +12,8 @@ function App() {
           <Route path="/" element={<h1>Home Page</h1>} />
           <Route path="/snacks" element={<h1>Index Page</h1>} />
           <Route path="/snacks/:id" element={<SnackShow />} />
-          <Route path="/snacks/:id/edit" element={<h1>Edit Show</h1>} />
-          <Route path="/snacks/new" element={<h1>Create New Snack</h1>} />
+          <Route path="/snacks/:id/edit" element={<EditForm />} />
+          <Route path="/snacks/new" element={<NewForm />} />
         </Routes>
       </Router>
     </div>
