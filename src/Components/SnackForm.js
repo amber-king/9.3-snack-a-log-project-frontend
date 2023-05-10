@@ -4,11 +4,11 @@ const defaultValues = {
   snack_name: "",
   calorie_count: 0,
   food_group: "",
-  is_healthy: true,
+  is_healthy: false,
   time_eaten: "",
 };
 
-export default function Form({ onSubmit, initialValues = defaultValues }) {
+function SnackForm({ onSubmit, initialValues = defaultValues }) {
   const [snack, setSnack] = useState({ ...initialValues });
 
   useEffect(() => setSnack(initialValues), [initialValues]);
@@ -42,3 +42,4 @@ export default function Form({ onSubmit, initialValues = defaultValues }) {
     </main>
   );
 }
+export default SnackForm;

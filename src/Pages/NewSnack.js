@@ -1,8 +1,8 @@
+import SnackForm from "../Components/SnackForm";
 import { useNavigate } from "react-router-dom";
-import Form from "./Form";
 const API = process.env.NODE_ENV.REACT_APP_API_URL;
 
-export default function NewForm() {
+function NewSnack() {
   const navigate = useNavigate();
   const onSubmit = async (snack) => {
     await fetch(`${API}/snacks`, {
@@ -14,8 +14,11 @@ export default function NewForm() {
   };
 
   return (
-    <main>
-      <Form onSubmit={onSubmit} />;
-    </main>
+    <div>
+      <h2>New</h2>
+      <SnackForm onSubmit={onSubmit} />;
+    </div>
   );
 }
+
+export default NewSnack;
