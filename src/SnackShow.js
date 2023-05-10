@@ -4,27 +4,37 @@ const API = process.env.REACT_APP_API_URL;
 
 export default function SnackShow() {
   const { id } = useParams();
-  const [snack, setSnack] = useState({
-    calorie_count: 0,
-    food_group: "",
-    is_healthy: true,
-    snack_id: 1,
-    snack_name: "",
-    time_eaten: "",
-  });
+  const [snack, setSnack] = useState({});
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     const asyncFetch = async () => {
       const result = await fetch(`${API}/snacks/${id}`);
-      const data = await result.json();
-      setSnack(data);
+      if (result.ok) {
+        const data = await result.json();
+        setSnack(data);
+      } else {
+        setError(true);
+      }
     };
 
     asyncFetch();
   }, [id]);
 
-  const handleDelete = () => {};
-
+  const handleDelete = async () => {
+    await fetch(`${API}/snacks/${id}`, {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(snack),
+    });
+  };
+  if (error) {
+    return (
+      <main>
+        <h1>There appears to be an error</h1>
+      </main>
+    );
+  }
   return (
     <main>
       <div>
@@ -33,7 +43,7 @@ export default function SnackShow() {
         <h1>In the {snack.time_eaten}</h1>
         <h1>Calorie count: {snack.calorie_count}</h1>
         {snack.is_healthy && <h1>⭐️</h1>}
-        <button onClick={handleDelete()}>Delete</button>
+        <button onClick={handleDelete}>Delete</button>
         <Link to={`/snacks/${id}/edit`}>
           <button>Edit</button>
         </Link>
