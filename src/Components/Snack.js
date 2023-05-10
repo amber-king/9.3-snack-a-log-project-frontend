@@ -5,9 +5,7 @@ function Snack({ snack }) {
   return (
     <tr>
       <td className="Snack">
-        <a href={snack.snack_name} target="_blank" rel="noreferrer">
-          {snack.snack_name}
-        </a>
+        <Link to={`/snacks/${snack.snack_id}`}>{snack.snack_name}</Link>
       </td>
       <td>{snack.time_eaten}</td>
       <td>{snack.food_group}</td>
@@ -16,9 +14,7 @@ function Snack({ snack }) {
       <td>{snack.calorie_count}</td>
       <td>{snack.quantity}</td>
 
-      <td>
-        <Link to={`/snacks/${snack.snack_id}`}></Link>
-      </td>
+      <td></td>
     </tr>
   );
 }
