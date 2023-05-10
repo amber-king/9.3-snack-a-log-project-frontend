@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  font-family: fantasy;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+nav {
+  background-color: tan;
+  background-attachment: fixed;
+  background-size: cover;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  box-shadow: 2px 2px 4px grey;
+  margin-bottom: 1em;
+}
+
+main {
+  width: 90%;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+button a {
+  color: black;
+}
+
+h4 {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+table {
+  width: 50%;
+  margin: auto;
+}
+
+td {
+  text-align: center;
+}
+
+tbody td:not(td:first-of-type):hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+tbody tr:nth-child(even) {
+  background: lightgray;
+}
+a:hover {
+  color: darkolivegreen;
+}
