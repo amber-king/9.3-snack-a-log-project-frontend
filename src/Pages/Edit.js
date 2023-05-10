@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import SnackForm from "../Components/SnackForm";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 const API = process.env.REACT_APP_API_URL;
 
 function Edit() {
   const [singleSnack, setSingleSnack] = useState();
   const { id } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const asyncFetch = async () => {
@@ -17,11 +18,14 @@ function Edit() {
   }, [id]);
 
   const onSubmit = async (snack) => {
-    await fetch(`${API}/snacks`, {
-      method: "POST",
+    const response = await fetch(`${API}/snacks/${id}/`, {
+      method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(snack),
     });
+    if (response.ok) {
+      navigate(`/snacks/${id}`);
+    }
   };
 
   return (
