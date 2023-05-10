@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 const API = process.env.REACT_APP_API_URL;
 
 function Show() {
+  const navigate = useNavigate();
   const { id } = useParams();
   const [snack, setSnack] = useState({});
   const [error, setError] = useState(false);
@@ -22,11 +23,14 @@ function Show() {
   }, [id]);
 
   const handleDelete = async () => {
-    await fetch(`${API}/snacks/${id}`, {
+    const result = await fetch(`${API}/snacks/${id}`, {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(snack),
     });
+    if (result.ok) {
+      navigate("/snacks");
+    }
   };
 
   if (error) {
