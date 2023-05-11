@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import DeleteButton from "../Components/DeleteButton/DeleteButton";
 const API = process.env.REACT_APP_API_URL;
 
 function Show() {
@@ -50,7 +51,7 @@ function Show() {
         <h1>Calorie count: {snack.calorie_count}</h1>
         <h1>Quantity: {snack.quantity}</h1>
         {snack.is_healthy ? <h1>❤️</h1> : <h1>😕</h1>}
-        <button onClick={handleDelete}>Delete</button>
+        <DeleteButton handleDelete={handleDelete} />
         <Link to={`/snacks/${id}/edit`}>
           <button>Edit</button>
         </Link>
