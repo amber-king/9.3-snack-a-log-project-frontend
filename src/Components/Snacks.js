@@ -19,9 +19,17 @@ function Snacks() {
         console.warn("catch", error);
       });
   }, []);
+
+  const calculatesTotal = (array) => {
+    return array.reduce((acc, { calorie_count }) => {
+      return acc + calorie_count;
+    }, 0);
+  };
+  const totalCalories = snacks.length > 0 ? calculatesTotal(snacks) : 0;
   return (
     <div className="Snacks">
       {/* <h2>All Snacks:</h2> */}
+      <h3>Total Calories: {totalCalories} calories</h3>
       <section>
         <table>
           <thead>
