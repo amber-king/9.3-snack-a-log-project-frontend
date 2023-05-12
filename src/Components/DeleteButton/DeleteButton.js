@@ -20,10 +20,7 @@ function DeleteButton({ handleDelete }) {
               <button className="AlertDialogButton mauve">Cancel</button>
             </AlertDialog.Cancel>
             <AlertDialog.Action asChild>
-              <button
-                className="AlertDialogButton red"
-                onClick={() => handleDelete()}
-              >
+              <button className="AlertDialogButton red" onClick={handleDelete}>
                 Delete
               </button>
             </AlertDialog.Action>
