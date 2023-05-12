@@ -18,7 +18,7 @@ function NewSnack() {
   return (
     <div>
       <h2>New</h2>
-      <SnackForm onSubmit={onSubmit} />;
+      <SnackForm onSubmit={onSubmit} />
     </div>
   );
 }
