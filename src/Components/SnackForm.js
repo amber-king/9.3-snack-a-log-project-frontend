@@ -72,8 +72,7 @@ function SnackForm({ onSubmit, initialValues = defaultValues }) {
         onChange={onChange}
       />
       <label htmlFor="timeEaten">Time Eaten </label>
-      <select id="timeEaten" onChange={onChange}>
-        <option selected disabled></option>
+      <select id="timeEaten" value={snack.time_eaten} onChange={onChange}>
         <option value="Morning">Morning</option>
         <option value="Afternoon">Afternoon</option>
         <option value="Evening">Evening</option>
