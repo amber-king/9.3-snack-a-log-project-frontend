@@ -1,5 +1,21 @@
 # Snack-A-Log Project_9.3 🫒
 
+### This application is meant to allow user to keep track of their snacks through the day. The user will be able to see:
+- the snack name
+- the snacks food group
+- when the snack was consumed 
+- the health status of the snack
+- the calorie count of the snack
+- a calculation of total calorie intake
+
+### The user will also be able to: 
+- modify snacks they add to the list via a new snack form to complete 
+- modify previously placed snacks in their log via a edit form to complete. 
+- delete a snack as well via a delete button
+
+<hr>
+
+
 #### Netlify Fontend Link → https://snack-a-log-front-site.netlify.app/
 
 #### Render Backend Link → https://snack-a-log-hmal.onrender.com
@@ -7,6 +23,8 @@
 #### Trello Workflow Board Link → https://trello.com/b/Cy3WPzsV/93snack-log-workflow-%F0%9F%AB%92
 
 #### Backend Github Repo Link → https://github.com/amber-king/9.3-snack-a-log-project-backend
+
+
 
 <!-- ## Getting Started with Create React App
 
