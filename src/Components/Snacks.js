@@ -3,16 +3,14 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import Snack from "./Snack";
-
-
+const API = process.env.REACT_APP_API_URL;
 
 function Snacks() {
   const [snacks, setSnacks] = useState([]);
 
-
   useEffect(() => {
     axios
-      .get(`http://localhost:3033/snacks/`)
+      .get(`${API}/snacks`)
       .then((response) => {
         setSnacks(response.data);
       })
