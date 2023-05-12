@@ -10,7 +10,7 @@ function Edit() {
 
   useEffect(() => {
     const asyncFetch = async () => {
-      const response = await fetch(`/snacks/${id}`);
+      const response = await fetch(`${API}/snacks/${id}`);
       const data = await response.json();
       setSingleSnack(data);
     };
