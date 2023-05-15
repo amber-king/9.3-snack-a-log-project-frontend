@@ -40,7 +40,7 @@ function SnackForm({ onSubmit, initialValues = defaultValues }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="snack-form">
       <label htmlFor="name">Name</label>
       <input
         type="text"
@@ -85,7 +85,7 @@ function SnackForm({ onSubmit, initialValues = defaultValues }) {
         value={snack.quantity}
         onChange={onChange}
       />
-      <input type="submit" />
+      <button className="mauve">Submit</button>
     </form>
   );
 }

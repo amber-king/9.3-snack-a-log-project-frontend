@@ -7,7 +7,7 @@ function DeleteButton({ handleDelete }) {
   return (
     <AlertDialog.Root open={open} onOpenChange={setOpen}>
       <AlertDialog.Trigger asChild>
-        <button className="">Delete</button>
+        <button className="red">Delete</button>
       </AlertDialog.Trigger>
       <AlertDialog.Portal>
         <AlertDialog.Overlay className="AlertDialogOverlay" />

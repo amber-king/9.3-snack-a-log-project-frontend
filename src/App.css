@@ -2,9 +2,60 @@
   text-align: center;
 }
 
+.snack-form {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  background-color: tan;
+  padding: 2rem 8rem;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+}
 
+.snack-show {
+  background-color: tan;
+  margin: 0rem auto;
+  width: 20rem;
+  padding: 2rem 8rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+}
 
+button {
+  all: unset;
+}
 
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  padding: 0 15px;
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 500;
+  height: 35px;
+}
 
+button.red {
+  background-color: var(--red4);
+  color: var(--red11);
+}
+button.red:hover {
+  background-color: var(--red5);
+}
+button.red:focus {
+  box-shadow: 0 0 0 2px var(--red7);
+}
 
-
+button.mauve {
+  background-color: var(--mauve4);
+  color: var(--mauve11);
+}
+button.mauve:hover {
+  background-color: var(--mauve5);
+}
+button.mauve:focus {
+  box-shadow: 0 0 0 2px var(--red7);
+}
