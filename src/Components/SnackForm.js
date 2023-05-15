@@ -47,6 +47,7 @@ function SnackForm({ onSubmit, initialValues = defaultValues }) {
         id="name"
         value={snack.snack_name}
         onChange={onChange}
+        required
       />
       <label htmlFor="calories">Calorie Count</label>
       <input
