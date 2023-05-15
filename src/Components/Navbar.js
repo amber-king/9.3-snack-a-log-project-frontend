@@ -10,7 +10,7 @@ export default function NavBar() {
       <h3>
         <Link to="/snacks">Snacks 🥑</Link>
       </h3>
-      <button>
+      <button className="mauve">
         <Link to="/snacks/new">New Snack</Link>
       </button>
     </nav>

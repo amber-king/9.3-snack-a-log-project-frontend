@@ -11,7 +11,6 @@ const defaultValues = {
 
 function SnackForm({ onSubmit, initialValues = defaultValues }) {
   const [snack, setSnack] = useState({ ...initialValues });
-
   useEffect(() => setSnack(initialValues), [initialValues]);
 
   const onChange = (e) => {
@@ -41,13 +40,14 @@ function SnackForm({ onSubmit, initialValues = defaultValues }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="snack-form">
       <label htmlFor="name">Name</label>
       <input
         type="text"
         id="name"
         value={snack.snack_name}
         onChange={onChange}
+        required
       />
       <label htmlFor="calories">Calorie Count</label>
       <input
@@ -73,12 +73,11 @@ function SnackForm({ onSubmit, initialValues = defaultValues }) {
         onChange={onChange}
       />
       <label htmlFor="timeEaten">Time Eaten </label>
-      <input
-        type="text"
-        id="timeEaten"
-        value={snack.time_eaten}
-        onChange={onChange}
-      />
+      <select id="timeEaten" value={snack.time_eaten} onChange={onChange}>
+        <option value="Morning">Morning</option>
+        <option value="Afternoon">Afternoon</option>
+        <option value="Evening">Evening</option>
+      </select>
       <label htmlFor="quantity">Quantity </label>
       <input
         type="text"
@@ -86,7 +85,7 @@ function SnackForm({ onSubmit, initialValues = defaultValues }) {
         value={snack.quantity}
         onChange={onChange}
       />
-      <input type="submit" />
+      <button className="mauve">Submit</button>
     </form>
   );
 }

@@ -42,9 +42,9 @@ function Show() {
     );
   }
   return (
-    <main>
-      <div>
-        <h1>Show</h1>
+    <div>
+      <h1>Show</h1>
+      <div className="snack-show">
         <h1>{snack.snack_name}</h1>
         <h1>{snack.food_group}</h1>
         <h1>In the {snack.time_eaten}</h1>
@@ -53,10 +53,10 @@ function Show() {
         {snack.is_healthy ? <h1>❤️</h1> : <h1>😕</h1>}
         <DeleteButton handleDelete={handleDelete} />
         <Link to={`/snacks/${id}/edit`}>
-          <button>Edit</button>
+          <button className="mauve">Edit</button>
         </Link>
       </div>
-    </main>
+    </div>
   );
 }
 
